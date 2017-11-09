@@ -59,6 +59,7 @@ LinkedList* LinkedList::Insert(Node* node, unsigned int i){
     _count++;
     return this;
 }
+
 LinkedList::Node* LinkedList::Get(unsigned int i){
     assert(_count > 0 && i < _count);
     Node* current = _first;
