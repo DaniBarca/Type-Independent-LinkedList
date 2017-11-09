@@ -1,4 +1,4 @@
-# Type-Independent-LinkedList
+# Type Independent LinkedList
 A LinkedList without templates which Node class can be inherited.
 
 ## Benefits of this implementation
