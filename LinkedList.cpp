@@ -12,7 +12,6 @@ LinkedList* LinkedList::Add(Node* node){
     return Insert(node, _count);
 }
 
-#include <iostream>
 LinkedList* LinkedList::Insert(Node* node, unsigned int i){
     assert(i <= _count);
 
