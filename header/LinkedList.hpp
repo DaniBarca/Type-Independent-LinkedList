@@ -31,7 +31,8 @@ public:
     LinkedList* Insert(Node* node, unsigned int position);
 
     Node* Get(unsigned int i);
-    Node* Remove(unsigned int i);
+    Node* Remove(unsigned int i); //Warning: won't delete node's memory, it's better to use Delete(i) instead
+    void Delete(unsigned int i);
 
     Node* First();
     Node* Last();

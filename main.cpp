@@ -63,6 +63,9 @@ int main(){
     l.Insert((LNode*)new Test3("b", "test"), 1);
     l.Insert((LNode*)new Test3("c", "test"), 0);
 
+    l.Delete(1);
+    l.Delete(0);
+
     for(LNode* i = l.First(); i != NULL; i = i->Next()){
         std::cout << i->ToString() << std::endl;
     }

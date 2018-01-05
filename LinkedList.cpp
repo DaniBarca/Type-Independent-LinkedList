@@ -69,6 +69,36 @@ LinkedList::Node* LinkedList::Get(unsigned int i){
     return current;
 }
 
+LinkedList::Node* LinkedList::Remove(unsigned int i){
+    assert(_count > 0 && i < _count);
+    
+    Node* toRemove = Get(i);
+    Node* prev     = toRemove->_prev;
+    Node* next     = toRemove->_next;
+
+    if(prev != NULL)
+        prev->_next = next;
+    
+    if(next != NULL)
+        next->_prev = prev;
+
+    toRemove->_next = NULL;
+    toRemove->_prev = NULL;
+
+    if(_first == toRemove)
+        _first = _count > 1 ? next : NULL;
+
+    if(_last == toRemove)
+        _last = _count > 1 ? prev : NULL;
+
+    _count--;
+    return toRemove;
+}
+
+void LinkedList::Delete(unsigned int i){
+    delete Remove(i);
+}
+
 LinkedList::Node* LinkedList::First(){
     return _first;
 }
