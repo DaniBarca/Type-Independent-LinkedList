@@ -82,6 +82,8 @@ unsigned int LinkedList::Count(){
 }
 
 LinkedList::~LinkedList(){
+    if(_count == 0) return;
+    
     Node* current = _first;
     for(unsigned int i = 0; i < _count - 1; ++i){
         current = current->Next();
